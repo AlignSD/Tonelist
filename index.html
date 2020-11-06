@@ -11,24 +11,84 @@
   <link href="./Assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Tonelist</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Spotify</a></li>
-      </ul>
+    <!-- Top navbar section -->
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">Tonelist</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Spotify</a></li>
+        </ul>
+  
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Spotify</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+   <!-- SIDEBAR SECTION --> 
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Spotify</a></li>
+   <div class="sidebar">
+    <div class="sidenav sidenav-fixed"> 
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img src="images/yuna.jpg" alt="" class="circle">
+          <span class="title">Title</span>
+          <p>First Line <br>
+             Second Line
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="images/yuna.jpg" alt="" class="circle">
+          <span class="title">Title</span>
+          <p>First Line <br>
+             Second Line
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="images/yuna.jpg" alt="" class="circle">
+          <span class="title">Title</span>
+          <p>First Line <br>
+             Second Line
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="images/yuna.jpg" alt="" class="circle">
+          <span class="title">Title</span>
+          <p>First Line <br>
+             Second Line
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="images/yuna.jpg" alt="" class="circle">
+          <span class="title">Title</span>
+          <p>First Line <br>
+             Second Line
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
       </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
-  </nav>
-
+    <!-- this is the main container for site -->
+  <main> 
+   <div class="container ">
+    <div class="row" style="margin-bottom: 0;">
+      <div class="col s12">
+        <h1 class="header">Getting Started</h1>
+        <h4 class="light">Learn how to easily start using Materialize in your website.</h4>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- main body sub header potentially -->
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
@@ -44,127 +104,10 @@
     </div>
     <div class="parallax"><img src="./Assets/images/background1.jpg" alt="Unsplashed background img 1"></div>
   </div>
- 
-  <div class="row">
-
-    <div class="col s12 m4 l3"> TEST<!-- Note that "m4 l3" was added -->
-      <ul class="collection">
-        <li class="collection-item avatar">
-          <img src="images/yuna.jpg" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <i class="material-icons circle">folder</i>
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <i class="material-icons circle green">insert_chart</i>
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <i class="material-icons circle red">play_arrow</i>
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-      </ul>
-    </div>
-
-    
-  
-  
-  <div class="col s12 m8 l9"> TEST <!-- Note that "m8 l9" was added -->
-    <!-- Teal page content
-
-          This content will be:
-      9-columns-wide on large screens,
-      8-columns-wide on medium screens,
-      12-columns-wide on small screens  -->
-  
-
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="parallax-container valign-wrapper">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <div class="row center">
-            <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-          </div>
-        </div>
-      </div>
-      <div class="parallax"><img src="./Assets/images/background2.jpg" alt="Unsplashed background img 2"></div>
-    </div>
-  
-    <div class="container">
-      <div class="section">
-  
-        <div class="row">
-          <div class="col s12 center">
-            <h3><i class="mdi-content-send brown-text"></i></h3>
-            <h4>Contact Us</h4>
-            <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="parallax-container valign-wrapper">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <div class="row center">
-            <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-          </div>
-        </div>
-      </div>
-      <div class="parallax"><img src="./Assets/images/background3.jpg" alt="Unsplashed background img 3"></div>
-    </div>
-  </div>
 </div>
-</div>
-
+  
+</main> 
+  <!-- footer section -->
   <footer class="page-footer teal">
     <div class="container">
       <div class="row">
@@ -199,6 +142,7 @@
       Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
       </div>
     </div>
+    
   </footer>
 
 
