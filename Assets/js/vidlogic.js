@@ -12,15 +12,13 @@ $.ajax({
 })
   // We store all of the retrieved data inside of an object called "response"
   .then(function(response) {
-    var toneList = ["Queen", "Led Zeppelin", "David Bowie", "Pink Floyd"];
-    var tonelistRandom = toneList[Math.floor(Math.random() * toneList.length)];
-    console.log(tonelistRandom);
 
     console.log(response);
-    var randomNumber = Math.floor(Math.random()*50);
+    var randomNumber = Math.floor(Math.random()*5);
     console.log(randomNumber);
     var videoName = (response.items[randomNumber].snippet.title)
     var videoPlay = ("https://www.youtube.com/embed/" + (response.items[randomNumber].id.videoId))
+
 
     // // Transfer content to HTML
     $("#videoName").html("<h1>" + videoName + "</h1>");
