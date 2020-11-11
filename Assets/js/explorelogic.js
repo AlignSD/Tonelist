@@ -1,57 +1,95 @@
-var toneList = ["Queen", "Led Zeppelin", "David Bowie", "Pink Floyd"];
 var cardMarkUp = "";
 var cardMarkUp2 = "";
+var simAPic = "";
+let bandSearch = document.querySelector("#bandSearch");
+let bandSearchButton = document.querySelector("#bandSearchButton");
+let artistlist = document.querySelector("#artistList");
+let similarA = document.querySelector("#similarA")
+let bands = [];
 
-toneLoad();
-function toneLoad () {
-  
-  $("#artistList").empty();
+$(document).ready(function() {
+  console.log( "ready!" );
+});
 
-  for (let index = 0; index < toneList.length; index++) {
-    element = toneList[index];
-    console.log(element);
-    cardMarkUp +=
-    <li class="collection-item avatar">
-        <img src="images/yuna.jpg" alt="" class="circle">
-        <span class="title">Title</span>
-        <p>First Line <br>
-             Second Line
-      </p>
-    
-    `
-      <a class="collection-item" data-name="${element}">${element}</a>
-    `
+setPage();
+
+function setPage() {
+  var storedBands = JSON.parse(localStorage.getItem("bands"));
+  console.log(storedBands);
+
+  if(storedBands !== null) {
+    bands = storedBands;
+    renderBandList();
+  } else {
+    localStorage.setItem("bands", "[]");
   }
-  $("#artistList").html(cardMarkUp)
 }
 
-$(".collection-item").on("click",function() {
-  $("#similarA").empty();
+
+$('#bandSearchButton').on('click',function(event) {
+  event.preventDefault();
+  var bandStorage = $('#bandSearch').val().trim();
+  bands.push(bandStorage);
+  document.getElementById('bandSearch').value='';
+  renderBandList();
+});
+
+ function renderBandList() {
+  localStorage.setItem("bands", JSON.stringify(bands));
+   let cardMarkUp = "";
+
+  for (let i = 0; i < bands.length; i++) {
+    let element = bands[i];
+    cardMarkUp += 
+    `
+    <li class="collection-item avatar" data-name="${element}">
+    <img src="" alt="" class="circle">
+    <span class="title">${element}</span>
+    <p>First Line <br>
+       Second Line
+    </p>
+    <a href="#!" class="secondary-content"><i  class="material-icons">call_split</i></a>
+  </li>
+    ` ;
+  } $("#searchedBands").html(cardMarkUp);
+ };
+// toneLoad();
+
+// function toneLoad () {
+  
+//   document.getElementById('artistList').value='';
+
+//   for (let index = 0; index < bands.length; index++) {
+//     element = bands[index];
+//     console.log(element);
+//     cardMarkUp +=
+    
+//     `
+//       <a class="collection-item" data-name="${element}">${element}</a>
+//     `
+//   }
+//   $("#artistList").html(cardMarkUp)
+// }
+
+$(".collection").on("click", ".collection-item",function() {
   var clickedArtist = $(this).attr("data-name");
   console.log(clickedArtist);
+  $("#similarA").empty();
   similarAristsearch(clickedArtist);
   
 });
 
-$("#addButton").on("click",function() {
-  
+$('#similarA').on('click', '.addButton', function() { 
   var simA2add = $(this).attr("data-name");
-  toneList.push(simA2add);
-  console.log(toneList);
-  $("#artistList").empty()
-  toneLoad();
+  bands.push(simA2add);
+  console.log(bands);
+  renderBandList();
+});  
   
-  // working
-  // toneList.push("Yaz");
-  // console.log(toneList);
-  
-  
-  // console.log(toneList);
-  
-});
-
 function similarAristsearch (clickedArtist) {
-    var APIKey3 = "390492-tonelist-LIO11GZ3"
+  
+
+  var APIKey3 = "390492-tonelist-LIO11GZ3"
     var queryURL3 =  "https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q="+ clickedArtist + "&limit=5&verbose=1" + "&k=" + APIKey3;
 
     $.ajax({
@@ -77,7 +115,7 @@ function similarAristsearch (clickedArtist) {
         method:"GET"
         }).then(function(response5){
          
-          simAPic = (response5.thumb_url);
+          simAPic = (response5.image_url);
           console.log(simAPic);
 
         });
@@ -88,16 +126,16 @@ function similarAristsearch (clickedArtist) {
           <div class="card-image">
             <img src="${simAPic}">
               <span class="card-title">${similarArtists}</span>
-              <a id="addButton" class="btn-floating halfway-fab waves-effect waves-light red" data-name="Yaz"><i class="material-icons">add</i></a>
-              </div>
+              <a class="addButton btn-floating halfway-fab waves-effect waves-light red" data-name="${similarArtists}">
+              <i class="material-icons">add</i>
+              </a>
+          </div>
           <div class="card-content black-text">
-          <p>${similarAteaser}</p>
+            <p>${similarAteaser}</p>
           </div>
         </div>
         `
-      }
-     ;
-  $("#similarA").html(cardMarkUp2);
-});
-
-}
+      };
+    $("#similarA").html(cardMarkUp2);
+  });
+};
