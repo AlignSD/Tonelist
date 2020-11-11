@@ -25,6 +25,7 @@ $('#bandSearchButton').on('click',function(event) {
   bands.push(bandStorage);
   localStorage.setItem("bands", JSON.stringify(bands));
   $('#bandSearch').empty();
+  document.getElementById('bandSearch').value='';
   renderBandList();
 
 
