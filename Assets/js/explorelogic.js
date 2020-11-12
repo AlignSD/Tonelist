@@ -34,7 +34,7 @@ $('#bandSearchButton').on('click', function (event) {
   renderBandList();
 });
 
-$("#searchedBands").on('click',".collection-item", function(event) {
+$("#searchedBands").on('click',".delete", function(event) {
   var target = $(event.target).closest(".collection-item").attr("data-name");
 
   console.log("target: ", target)
@@ -51,16 +51,17 @@ function renderBandList() {
     let element = bands[i];
     cardMarkUp +=
       `
-    <li class="collection-item avatar" data-name="${element}">
-    <img src="" alt="" class="circle">
-    <span class="title col 9">${element}</span>
-    <a href="#!" >
-    <i class="material-icons">call_split</i></a>
-    <a href="#!" ><i class="material-icons">close</i></a>
-  </li>
+  <li class="collection-item" data-name="${element}"><div>${element}<a href="#!" class="secondary-content simrequest" data-name="${element}"><i class="material-icons">call_split</i></a><a href="#!" class="secondary-content delete"><i class="material-icons">close</i></a></div></li>
     ` ;
   } $("#searchedBands").html(cardMarkUp);
 };
+
+// <li class="collection-item avatar" data-name="${element}">
+//     <span class="title col 9">${element}</span>
+//     <a href="#!" class="simrequest" data-name="${element}" >
+//     <i class="material-icons">call_split</i></a>
+//     <a href="#!" class="delete" ><i class="material-icons">close</i></a>
+//   </li>
 // toneLoad();
 
 // function toneLoad () {
@@ -79,9 +80,9 @@ function renderBandList() {
 //   $("#artistList").html(cardMarkUp)
 // }
 
-$(".collection").on("click", ".collection-item", function () {
+$(".collection").on("click", ".simrequest", function () {
   var clickedArtist = $(this).attr("data-name");
-  console.log(clickedArtist);
+  console.log(this);
   $("#similarA").empty();
   similarAristsearch(clickedArtist);
 
@@ -132,14 +133,17 @@ function similarAristsearch(clickedArtist) {
           <div class="card">
             <div class="card-image">
               <img src="${simAPic}">
-                <span class="card-title">${similarArtists}</span>
+                <span class="card-title teal lighten-2">${similarArtists}</span>
                 <a class="addButton btn-floating halfway-fab waves-effect waves-light red" data-name="${similarArtists}">
                 <i class="material-icons">add</i>
                 </a>
             </div>
             <div class="card-content black-text">
-              <p>${similarAteaser}</p>
+              <p>Wikipedia excerpt: "${similarAteaser}</p>
             </div>
+            <div class="card-action">
+                <a class="red-text" href="${similarAwiki}">Full Wikipedia Article</a>
+              </div>
           </div>
         `
         $("#similarA").append(cardMarkUp2);
