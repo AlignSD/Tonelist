@@ -27,8 +27,12 @@ $('#bandSearchButton').on('click',function(event) {
   var bandStorage = $('#bandSearch').val().trim();
   bands.push(bandStorage);
   localStorage.setItem("bands", JSON.stringify(bands));
-  $('#bandSearch').empty();
-  document.getElementById('bandSearch').value='';
+// <<<<<<< patBranch
+//   document.getElementById('bandSearch').value='';;
+// =======
+//   $('#bandSearch').empty();
+//   document.getElementById('bandSearch').value='';
+// >>>>>>> main
   renderBandList();
 
 })

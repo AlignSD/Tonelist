@@ -33,49 +33,23 @@
 
    <div class="sidebar">
     <div class="sidenav sidenav-fixed"> 
-      <ul class="collection">
-        <li class="collection-item avatar">
-          <img src="" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <img src="" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <img src="" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <img src="" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <img src="" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
+      <div class="search-wrapper center-align">
+        <h6>Add Your Bands!</h6>
+        <form>
+        <div class="input-field center-align">
+        <input class= "center-align" id="bandSearch" placeholder="Search" type="text">
+        <button class="btn waves-effect waves-light " type="submit" name="action" id="bandSearchButton">Submit
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+        <div class="search-results"><p></p></div>
+      </div>
+      <ul class="collection" id="searchedBands">
+        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
       </ul>
+    </form>
     </div>
+  </div>
     <!-- this is the main container for site -->
   <main> 
    <div class="container ">
@@ -93,7 +67,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 id ="videoName" class="header center white-text"></h1>
+        <h1 id ="videoName" class="header center white-text teal lighten-2"></h1>
         <div class="row center">
                 <iframe id="carouselitem1" class="carousel-item"  id="videoPlay" width="851" height="479" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -103,10 +77,13 @@
         <div class="center">
           <a id="nextButton" class="waves-effect waves-light btn-large">Next Video</a>
         </div>
-
+        <!-- spacing for next video button -->
+        <br>
+         <p>   </p>
+        <br>
       </div>
     </div>
-    <div class="parallax"><img src="./Assets/images/background1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="./Assets/images/audience-868074_960_720.jpg" alt="Unsplashed background img 1"></div>
   </div>
 </div>
   
