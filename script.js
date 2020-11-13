@@ -2,10 +2,13 @@ let bandSearch = document.querySelector("#bandSearch");
 let bandSearchButton = document.querySelector("#bandSearchButton");
 let bands = [];
 
+// document ready function
 $( document ).ready(function() {
   console.log( "ready!" );
 });
 setPage();
+
+// sets local storage for sidenav
 function setPage() {
   var storedBands = JSON.parse(localStorage.getItem("bands"));
   console.log(storedBands);
@@ -18,16 +21,19 @@ function setPage() {
   }
 }
 
-
+// store what user inputs in local storage and save it when enter is pressed
 $('#bandSearchButton').on('click',function(event) {
   event.preventDefault();
   var bandStorage = $('#bandSearch').val().trim();
   bands.push(bandStorage);
   localStorage.setItem("bands", JSON.stringify(bands));
-  document.getElementById('bandSearch').value='';;
+// <<<<<<< patBranch
+//   document.getElementById('bandSearch').value='';;
+// =======
+//   $('#bandSearch').empty();
+//   document.getElementById('bandSearch').value='';
+// >>>>>>> main
   renderBandList();
-
-
 
 })
  function renderBandList() {
