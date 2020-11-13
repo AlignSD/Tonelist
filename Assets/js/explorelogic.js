@@ -139,7 +139,7 @@ function similarAristsearch(clickedArtist) {
                 <i class="material-icons">add</i>
                 </a>
             </div>
-            <div class="card-content black-text">
+            <div class="card-content black-text left-align">
               <p>Wikipedia excerpt: "${similarAteaser}</p>
             </div>
             <div class="card-action">
