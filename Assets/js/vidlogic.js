@@ -48,6 +48,42 @@ function renderBandList() {
   } $("#searchedBands").html(cardMarkUp);
 };
 
+$(".collection").on("click", ".simrequest", function () {
+  var clickedArtist = $(this).attr("data-name");
+  console.log(this);
+  $("#similarA").empty();
+  specificArtistvideo(clickedArtist);
+ 
+});
+
+function specificArtistvideo (clickedArtist) {
+  
+  var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    alphaRandom = alphabet[Math.floor(Math.random() * alphabet.length)];
+    console.log(alphaRandom);
+    var APIKey = "AIzaSyB9tAAyJN9_4lUe9OIbT98WOhWO3iomap0";
+    var randomNumber = Math.floor(Math.random()*5);
+        console.log(randomNumber);
+  var queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable=true&maxResults=5&q=" + clickedArtist + " music " + alphaRandom + "&type=video&key=" + APIKey;
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
+ // We store all of the retrieved data inside of an object called "response"
+      .then(function(response) {
+
+       console.log(response);
+        var videoName = (response.items[randomNumber].snippet.title)
+        var videoPlay = ("https://www.youtube.com/embed/" + (response.      items[randomNumber].id.videoId))
+      
+// // Transfer content to HTML
+      $("#videoName").html("<h1>" + videoName + "</h1>");
+      console.log(videoPlay);
+
+$("#carouselitem1").attr("src", videoPlay);
+});
+}
+
 newVideo();
 
 function newVideo() {

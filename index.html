@@ -16,85 +16,47 @@
       <div class="nav-wrapper container">
         <a id="logo-container" href="#" class="brand-logo">Tonelist</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Videos</a></li>
-          <li><a href="#">Spotify</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="explore.html">Explore</a></li>
         </ul>
   
         <ul id="nav-mobile" class="sidenav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Videos</a></li>
-          <li><a href="#">Spotify</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="explore.html">Explore</a></li>
         </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </div>
     </nav>
    <!-- SIDEBAR SECTION --> 
-
+    
    <div class="sidebar">
     <div class="sidenav sidenav-fixed"> 
-      <div class="search-wrapper">
+      <div class="search-wrapper center-align">
         <h6>Add Your Bands!</h6>
         <form>
-        <div class="input-field">
-        <input id="bandSearch" placeholder="Search" type="text">
-        <button class="btn waves-effect waves-light" type="submit" name="action" id="bandSearchButton">Submit
+        <div class="input-field center-align">
+        <input class= "center-align" id="bandSearch" placeholder="Search" type="text">
+        <button class="btn waves-effect waves-light " type="submit" name="action" id="bandSearchButton">Submit
           <i class="material-icons right">send</i>
         </button>
       </div>
-        <div class="search-results"><p>test</p></div>
+        <div class="search-results"><p></p></div>
       </div>
       <ul class="collection" id="searchedBands">
-        <li class="collection-item avatar">
-          <img src="images/yuna.jpg" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <img src="images/yuna.jpg" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <img src="images/yuna.jpg" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <img src="images/yuna.jpg" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <img src="images/yuna.jpg" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
+        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
       </ul>
     </form>
     </div>
+   
     <!-- this is the main container for site -->
   <main> 
    <div class="container ">
     <div class="row" style="margin-bottom: 0;">
       <div class="col s12">
-        <h1 class="header">Getting Started</h1>
-        <h4 class="light">Learn how to easily start using Materialize in your website.</h4>
+        <h1 class="header">Tonelist</h1>
+        <h4 class="light">Follow, watch and explore all your favorite bands</h4>
       </div>
       
     </div>
@@ -105,16 +67,17 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Tonelist</h1>
+        <h1 id="bandNametitle" class="header center white-text text-lighten-2">Add your favorite bands and click calendar to show tour dates!</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Listen and track the news for all your favorite bands</h5>
+          <h5 class="header col s12 light"></h5>
         </div>
        
-        <br><br>
-
+        <br id="tourDates"><br>
+        <!-- <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script> -->
+        <!-- <a id= "similarA" class="bit-widget-initializer" data-artist-name="Widespread Panic" data-display-local-dates="false" data-display-past-dates="false" data-auto-style="false" data-text-color="white" data-link-color="#00B4B3" data-background-color="rgba(0,0,0,0)" data-display-limit="15" data-display-start-time="false" data-link-text-color="#FFFFFF" data-display-lineup="false" data-display-play-my-city="true" data-separator-color="rgba(124,124,124,0.25)"></a> -->
       </div>
     </div>
-    <div class="parallax"><img src="./Assets/images/background1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="./Assets/images/audience-868074_960_720.jpg" alt="Unsplashed background img 1"></div>
   </div>
 </div>
   
@@ -124,27 +87,18 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <h5 class="white-text">About Us</h5>
+          <p class="grey-text text-lighten-4">We are a team of bootcamp students who are working hard at improving our coding chops. We enjoy music, music videos and live shows. This was an expression of our committment to the greater development community and rocking out!</p>
 
 
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
+          <h5 class="white-text">Band Members</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="https://github.com/pmo48">Evan Alioto</a></li>
+            <li><a class="white-text" href="https://github.com/mcastro24">Marcos Castro</li>
+            <li><a class="white-text" href="https://github.com/victorbunduc">Victor Bunduc</a></li>
+            <li><a class="white-text" href="https://github.com/pmo48">Pat Moriarty</a></li>
           </ul>
         </div>
       </div>

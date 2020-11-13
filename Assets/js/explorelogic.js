@@ -45,6 +45,7 @@ $("#searchedBands").on('click',".delete", function(event) {
 
 function renderBandList() {
   localStorage.setItem("bands", JSON.stringify(bands));
+  
   let cardMarkUp = "";
 
   for (let i = 0; i < bands.length; i++) {
@@ -85,7 +86,7 @@ $(".collection").on("click", ".simrequest", function () {
   console.log(this);
   $("#similarA").empty();
   similarAristsearch(clickedArtist);
-
+ 
 });
 
 $('#similarA').on('click', '.addButton', function () {
