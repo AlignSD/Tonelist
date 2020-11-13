@@ -43,6 +43,9 @@ $(".collection").on("click", ".simrequest", function () {
   //variable define data-name based on what was clicked
   var clickedArtist = $(this).attr("data-name");
 
+  $("#bandNametitle").empty();
+  $(".bit-widget-container").remove();
+
   //adds clicked article to title name
   $("#bandNametitle").text(clickedArtist);
 
