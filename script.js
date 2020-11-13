@@ -6,6 +6,8 @@ $(document).ready(function () {
   console.log("ready!");
 });
 setPage();
+
+// sets local storage for sidenav
 function setPage() {
   var storedBands = JSON.parse(localStorage.getItem("bands"));
   console.log(storedBands);
