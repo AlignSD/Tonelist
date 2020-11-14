@@ -16,7 +16,7 @@ This website can be used to store your favorite bands and find info like tour da
 
 # Usages
 
-- Giving 100% on homework
+- Giving 100% on project
 - Displaying 3rd-party API logic
 - Displaying tour dates for favorite bands
 - Displaying videos for favorite bands
