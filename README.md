@@ -24,10 +24,10 @@ This website can be used to store your favorite bands and find info like tour da
 
 # Credits
 
-naldz - https://naldzgraphics.net/free-weather-icons/
-openweather - https://openweathermap.org/api
-bootstrap - https://getbootstrap.com/
-jquery - https://jquery.com/
-bandsintown - https://www.bandsintown.com/
-youtube - https://www.youtube.com/
-tastedive - tastedive.com
+- naldz - https://naldzgraphics.net/free-weather-icons/
+- openweather - https://openweathermap.org/api
+- materialize - https://materializecss.com/
+- jquery - https://jquery.com/
+- bandsintown - https://www.bandsintown.com/
+- youtube - https://www.youtube.com/
+- tastedive - tastedive.com
