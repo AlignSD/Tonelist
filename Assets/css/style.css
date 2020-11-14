@@ -1,32 +1,51 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
 
+/* font color for certain elements */
 nav ul a,
 nav .brand-logo {
-  color: #444;
+  color:white ;
 }
 
+nav {
+  background:grey;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: lightgray;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+
+/* Line Height Sizing For <p> Elements */
 p {
   line-height: 2rem;
 }
 
+/* COLOR OF HAMBURGER MENU */
 .sidenav-trigger {
   color: #26a69a;
 }
 
+ul .collection {
+  background-color: grey;
+}
+/* MAIN BODY CONTAINER FORMATTING */
+/* THIS IS WHERE APIS GET PULLED TO */
 .parallax-container {
-  min-height: 380px;
+  
+  min-height: 1vh;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
 }
   .parallax-container .section {
     width: 100%;
+    
   }
 
 @media only screen and (max-width : 992px) {
@@ -36,15 +55,19 @@ p {
   }
   #index-banner .section {
     top: 10%;
+    
   }
 }
 
 @media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
+    
   }
+  
 }
 
+/* ICON FORMATTING */
 .icon-block {
   padding: 0 15px;
 }
@@ -52,12 +75,14 @@ p {
   font-size: inherit;
 }
 
+/* FOOTER FORMATTING */
 footer.page-footer {
   margin: 0;
 }
 
-nav, main, footer {
-  padding-left: 300px;
+/* HEADER HEIGHT */
+.toneHeader {
+  height: 5%;
 }
 
 @media only screen and (max-width : 992px) {
@@ -65,3 +90,4 @@ nav, main, footer {
     padding-left: 0;
   }
 }
+
