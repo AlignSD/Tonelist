@@ -1,18 +1,41 @@
 
-
+/* font color for certain elements */
 nav ul a,
 nav .brand-logo {
-  color: #444;
+  color:white ;
 }
 
+nav {
+  background:grey;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: lightgray;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+
+/* Line Height Sizing For <p> Elements */
 p {
   line-height: 2rem;
 }
 
+/* COLOR OF HAMBURGER MENU */
 .sidenav-trigger {
   color: #26a69a;
 }
 
+ul .collection {
+  background-color: grey;
+}
+/* MAIN BODY CONTAINER FORMATTING */
+/* THIS IS WHERE APIS GET PULLED TO */
 .parallax-container {
   
   min-height: 1vh;
@@ -32,16 +55,19 @@ p {
   }
   #index-banner .section {
     top: 10%;
+    
   }
 }
 
 @media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
+    
   }
   
 }
 
+/* ICON FORMATTING */
 .icon-block {
   padding: 0 15px;
 }
@@ -49,27 +75,19 @@ p {
   font-size: inherit;
 }
 
+/* FOOTER FORMATTING */
 footer.page-footer {
   margin: 0;
 }
 
+/* HEADER HEIGHT */
 .toneHeader {
   height: 5%;
 }
-
-/* nav, main, footer {
-  /* padding-left: 300px; */
-
 
 @media only screen and (max-width : 992px) {
   header, main, footer {
     padding-left: 0;
   }
-  /* .sidenav {
-    transform: translateX(0%) !important;
-    height: 25%;
-      width: 50%;
-  
-} */
 }
 
