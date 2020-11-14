@@ -5,9 +5,9 @@ This website can be used to store your favorite bands and find info like tour da
 
 ![tonelist homepage image](./Assets/images/homepage.png)
 
-![tonelist videos image](./Assets/images/homepage.png)
+![tonelist videos image](./Assets/images/videos.png)
 
-![tonelist explore image](./Assets/images/homepage.png)
+![tonelist explore image](./Assets/images/explore.png)
 
 # Installation
 
