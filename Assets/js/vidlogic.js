@@ -73,7 +73,7 @@ function specificArtistvideo (clickedArtist) {
     alphaRandom = alphabet[Math.floor(Math.random() * alphabet.length)];
 
     //youtube api key
-    var APIKey = "AIzaSyB9tAAyJN9_4lUe9OIbT98WOhWO3iomap0";
+    var APIKey = "AIzaSyAAWVDMoYkom0pWZsuV5lIY9Q4OOm6k6Y4";
     
     //random number to randomize which response is used
     var randomNumber = Math.floor(Math.random()*5);
