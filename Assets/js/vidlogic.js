@@ -72,8 +72,7 @@ function specificArtistvideo (clickedArtist) {
     //random letter from alphabet array
     alphaRandom = alphabet[Math.floor(Math.random() * alphabet.length)];
 
-    //youtube api key
-    var APIKey = "AIzaSyDlVZa_pgTZODAa5X5dG4Ix3lae_bwOH4k";
+
     
     //random number to randomize which response is used
     var randomNumber = Math.floor(Math.random()*5);
@@ -113,8 +112,7 @@ function newVideo() {
   
   //random letter from alphabet array
   alphaRandom = alphabet[Math.floor(Math.random() * alphabet.length)];
-  //youtube api key
-  var APIKey = "AIzaSyDlVZa_pgTZODAa5X5dG4Ix3lae_bwOH4k";
+
 
   //random number to pull a random video
   var randomNumber = Math.floor(Math.random()*5);
