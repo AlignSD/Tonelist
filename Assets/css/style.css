@@ -38,7 +38,8 @@ ul .collection {
 /* THIS IS WHERE APIS GET PULLED TO */
 .parallax-container {
   
-  min-height: 1vh;
+  min-height: 100vh;
+  position: relative;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
