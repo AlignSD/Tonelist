@@ -11,8 +11,16 @@ This website can be used to store your favorite bands and find info like tour da
 
 # Installation
 
+
 1. Open Browser
 2. Navigate to https://alignsd.github.io/Tonelist/index.html
+3. Because this application has no server side You will need to provide your own API key for the videos and explore section to work correctly.
+
+# Future Plans
+
+- Convert project into a full stack application using the MERN stack.
+- Create user profiles.
+- Spotify intergration.
 
 # Usages
 
