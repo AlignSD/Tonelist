@@ -1,3 +1,5 @@
+import {APIKey} from '../../config'
+
 //ready's page upon load
 $(document).ready(function () {
 });
@@ -88,7 +90,7 @@ function specificArtistvideo (clickedArtist) {
 
        console.log(response);
         var videoName = (response.items[randomNumber].snippet.title)
-        var videoPlay = ("https://www.youtube.com/embed/" + (response.      items[randomNumber].id.videoId))
+        var videoPlay = ("https://www.youtube.com/embed/" + (response.items[randomNumber].id.videoId))
       
 // // Transfer content to HTML
       $("#videoName").html("<h1>" + videoName + "</h1>");
