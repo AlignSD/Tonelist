@@ -20,6 +20,10 @@ main {
   flex: 1 0 auto;
 }
 
+.sidebar {
+  min-height: 100vh !important;
+}
+
 
 /* Line Height Sizing For <p> Elements */
 p {
@@ -37,12 +41,12 @@ ul .collection {
 /* MAIN BODY CONTAINER FORMATTING */
 /* THIS IS WHERE APIS GET PULLED TO */
 .parallax-container {
-  
   min-height: 100vh;
   position: relative;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
+  width: 100vw;
 }
   .parallax-container .section {
     width: 100%;
